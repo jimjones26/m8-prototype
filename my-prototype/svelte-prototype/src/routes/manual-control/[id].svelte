@@ -5,7 +5,7 @@
 	onMount(() => {
 		layoutStore.showBackButton();
 		layoutStore.showAlertButton();
-		layoutStore.setNavHeader(false, true, 'Manual Control', '/referring url');
+		layoutStore.setNavHeader(false, true, 'Manual Control', '/dashboard');
 		layoutStore.showBottomNavbar(true);
 		layoutStore.setCurrentTab('manual');
 	});

@@ -5,12 +5,7 @@
 	onMount(() => {
 		layoutStore.showBackButton();
 		layoutStore.showAlertButton();
-		layoutStore.setNavHeader(
-			false,
-			true,
-			'Irrigation Schedule',
-			'/referring url'
-		);
+		layoutStore.setNavHeader(false, true, 'Irrigation Schedule', '/dashboard');
 		layoutStore.showBottomNavbar(true);
 		layoutStore.setCurrentTab('irrigation');
 	});

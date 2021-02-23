@@ -34,7 +34,6 @@
 </main>
 
 {#if $layoutStore.showBottomNavbar}
-	<!-- <TabControl bind:activeTabValue={currentTab} {items} /> -->
 	<BottomNavbar bind:activeTabValue={currentTab} on:navigate={navigate} />
 {/if}
 

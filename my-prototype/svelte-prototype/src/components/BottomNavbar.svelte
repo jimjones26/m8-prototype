@@ -1,9 +1,5 @@
 <script>
-	import {createEventDispatcher, onMount} from 'svelte';
-
-	onMount(() => {
-		// Set default tab value
-	});
+	import {createEventDispatcher} from 'svelte';
 
 	const dispatch = createEventDispatcher();
 
