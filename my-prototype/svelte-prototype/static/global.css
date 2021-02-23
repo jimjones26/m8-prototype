@@ -1,0 +1,51 @@
+/* html {
+	background-color: #1f2023;
+	background: radial-gradient(
+		178.07% 98.33% at 92.27% 1.67%,
+		#383b40 0%,
+		#27292d 58.37%,
+		#1f2023 81.32%,
+		#010101 100%
+	);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+} */
+html {
+	background-color: #333333;
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+	color: #000;
+}
+body {
+	margin: 0px;
+	padding: 0px;
+	display: grid;
+	grid-template-rows: 1fr;
+	height: 100vh;
+}
+
+#sapper {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+.mapboxgl-marker {
+	display: grid;
+	cursor: pointer;
+}
+
+.marker-number {
+	font-size: 22px;
+	font-weight: bold;
+	align-self: center;
+	justify-self: center;
+	margin-bottom: 16px;
+}
+
+.mapboxgl-map {
+	grid-row: 1 /2;
+	grid-column: 1/2;
+}
