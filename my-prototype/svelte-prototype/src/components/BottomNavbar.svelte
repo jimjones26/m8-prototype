@@ -1,21 +1,40 @@
 <script>
-	import {createEventDispatcher} from 'svelte';
+	import {createEventDispatcher, onMount} from 'svelte';
+
+	onMount(() => {
+		// Set default tab value
+	});
 
 	const dispatch = createEventDispatcher();
+
+	export let activeTabValue;
+
+	const handleClick = ({url, activeTab}) => () => {
+		activeTabValue = activeTab;
+		dispatch('navigate', url);
+		console.log('from tab control: ', activeTabValue);
+	};
 </script>
 
 <div class="bottom-navbar-layout">
 	<button
 		class="bottom-navbar-button"
-		on:click={() => dispatch('showWaterguard')}><svg
-			class="waterguard-button-svg">
+		on:click={handleClick({
+			url: '/waterguard-detail/1',
+			activeTab: 'waterguard'
+		})}><svg
+			class={activeTabValue === 'waterguard' ? 'waterguard-button-svg active' : 'waterguard-button-svg'}>
 			<use
 				class="hamburger-icon"
 				xlink:href="../images/icons.svg#waterguard-icon" />
 		</svg></button>
 	<button
 		class="bottom-navbar-button"
-		on:click={() => dispatch('showSchedule')}><svg class="schedule-button-svg">
+		on:click={handleClick({
+			url: '/irrigation-schedule/1',
+			activeTab: 'irrigation'
+		})}><svg
+			class={activeTabValue === 'irrigation' ? 'schedule-button-svg active' : 'schedule-button-svg'}>
 			<use
 				class="hamburger-icon"
 				xlink:href="../images/icons.svg#schedule-icon" />
@@ -91,5 +110,8 @@
 		width: 20px;
 		height: 20px;
 		fill: rgb(255, 255, 255, 0.3);
+	}
+	.active {
+		fill: #ff4d00;
 	}
 </style>

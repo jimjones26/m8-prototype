@@ -5,16 +5,21 @@
 	onMount(() => {
 		layoutStore.showBackButton();
 		layoutStore.showAlertButton();
-		layoutStore.setNavHeader(false, true, 'WaterGuard 1', '/dashboard');
+		layoutStore.setNavHeader(
+			false,
+			true,
+			'Irrigation Schedule',
+			'/referring url'
+		);
 		layoutStore.showBottomNavbar(true);
-		layoutStore.setCurrentTab('waterguard');
+		layoutStore.setCurrentTab('irrigation');
 	});
 </script>
 
-<div class="waterguard-detail-layout">this is the waterguard detail page</div>
+<div class="irrigation-detail-layout">this is the irrigation schedule page</div>
 
 <style>
-	.waterguard-detail-layout {
+	.irrigation-detail-layout {
 		background-color: #ededed;
 	}
 </style>

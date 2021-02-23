@@ -13,7 +13,8 @@ const layoutStore = writable({
 	showBackButton: false,
 	showAlertButton: false,
 	showBottomNavbar: false,
-	referringUrl: []
+	referringUrl: [],
+	currentTab: ''
 });
 
 const customLayoutStore = {
@@ -69,6 +70,12 @@ const customLayoutStore = {
 	showBottomNavbar: bool => {
 		layoutStore.update(currentState => {
 			return {...currentState, showBottomNavbar: bool};
+		});
+	},
+
+	setCurrentTab: value => {
+		layoutStore.update(currentState => {
+			return {...currentState, currentTab: value};
 		});
 	}
 };

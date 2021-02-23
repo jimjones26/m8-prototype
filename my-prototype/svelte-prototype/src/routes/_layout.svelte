@@ -9,7 +9,12 @@
 	}
 	async function showMenu(event) {
 		await goto('/menu');
-		console.log('SHOW MENU');
+	}
+
+	$: currentTab = $layoutStore.currentTab;
+
+	function navigate(event) {
+		goto(event.detail);
 	}
 </script>
 
@@ -29,7 +34,8 @@
 </main>
 
 {#if $layoutStore.showBottomNavbar}
-	<BottomNavbar />
+	<!-- <TabControl bind:activeTabValue={currentTab} {items} /> -->
+	<BottomNavbar bind:activeTabValue={currentTab} on:navigate={navigate} />
 {/if}
 
 <style>
