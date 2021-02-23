@@ -12,7 +12,6 @@
 	const handleClick = ({url, activeTab}) => () => {
 		activeTabValue = activeTab;
 		dispatch('navigate', url);
-		console.log('from tab control: ', activeTabValue);
 	};
 </script>
 
@@ -57,8 +56,8 @@
 		</svg></button>
 	<button
 		class="bottom-navbar-button"
-		on:click={() => dispatch('showManualControl')}><svg
-			class="manual-control-button-svg">
+		on:click={handleClick({url: '/manual-control/1', activeTab: 'manual'})}><svg
+			class={activeTabValue === 'manual' ? 'manual-control-button-svg active' : 'manual-control-button-svg'}>
 			<use
 				class="hamburger-icon"
 				xlink:href="../images/icons.svg#manual-control-icon" />
