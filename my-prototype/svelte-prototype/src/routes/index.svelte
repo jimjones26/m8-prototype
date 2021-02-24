@@ -39,6 +39,7 @@
 <style>
 	.main-layout {
 		display: grid;
+		background-color: #333;
 	}
 	/* .logo-layout {
 		display: grid;

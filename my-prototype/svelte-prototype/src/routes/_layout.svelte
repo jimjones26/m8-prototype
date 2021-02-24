@@ -40,7 +40,7 @@
 <style>
 	main {
 		display: grid;
-		background-color: transparent;
+		background-color: #ededed;
 		padding: 0;
 		margin: 0;
 		overflow: hidden auto;

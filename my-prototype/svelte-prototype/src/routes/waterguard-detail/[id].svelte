@@ -12,46 +12,63 @@
 </script>
 
 <div class="waterguard-detail-layout">
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in ullamcorper
-	tortor. Aliquam erat volutpat. Nulla facilisi. Quisque vulputate arcu
-	vestibulum, semper lacus ut, ultrices sapien. Ut at augue sit amet mi
-	malesuada fermentum sit amet in nibh. Morbi ac mauris hendrerit, vulputate
-	lorem id, congue risus. Morbi consequat odio a hendrerit elementum.
-	Pellentesque vitae mollis lectus. Suspendisse sit amet sodales ligula, at
-	sodales diam. Duis tempus velit facilisis tortor commodo maximus. Aenean
-	tempor pulvinar eros, nec suscipit lacus tincidunt et. Aenean posuere
-	sollicitudin pellentesque. Aliquam tempus dolor quis porta viverra. Cras sed
-	lacus at neque imperdiet consectetur id sagittis eros. Duis sit amet massa vel
-	purus iaculis hendrerit id et lacus. Ut sed maximus lorem. Fusce sollicitudin
-	dapibus quam quis convallis. Cras molestie condimentum tristique. Vivamus
-	euismod commodo nisl, a egestas libero hendrerit sollicitudin. Quisque nulla
-	mauris, dictum sed lacinia id, accumsan eget purus. Pellentesque eu tempor
-	nisi, rutrum accumsan sapien. Proin et ligula nec massa sollicitudin euismod.
-	Mauris in nibh felis. Donec id molestie ex. Vestibulum semper lacus non
-	convallis iaculis. Donec et neque dapibus nunc aliquam imperdiet ac ac lectus.
-	Vestibulum fringilla diam a arcu pretium pretium. Cras efficitur purus vel
-	risus placerat eleifend. Nulla consequat porttitor leo at dapibus. Aenean
-	venenatis ante posuere, pellentesque erat vel, euismod lacus. In hac habitasse
-	platea dictumst. Vivamus sed ligula id quam tempus accumsan. Maecenas
-	elementum vehicula fermentum. Praesent sit amet venenatis massa. Sed in sem
-	vitae orci maximus rutrum eu eu est. Sed ac aliquam tortor. Vivamus rhoncus
-	lorem ut auctor blandit. Nullam maximus nisl magna, vitae sagittis felis
-	vestibulum id. Pellentesque hendrerit nisl vel sem pretium lobortis. In in est
-	maximus, mollis metus eu, blandit sem. Integer non lacus imperdiet, ornare
-	velit sed, convallis orci. Sed eleifend turpis nec massa efficitur, quis
-	posuere lacus tristique. Duis finibus convallis quam, a tincidunt elit
-	consequat at. Praesent tempor metus sed luctus condimentum. Vestibulum ante
-	ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; In ac
-	diam imperdiet, lobortis neque sed, mollis neque. Aliquam sodales, sapien eu
-	efficitur bibendum, ante urna sagittis mi, in consequat odio nisl non eros.
-	Nullam varius in quam dignissim convallis. Nullam sit amet auctor risus,
-	accumsan condimentum leo. Etiam pellentesque consectetur magna. Class aptent
-	taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-	Duis eu quam eget nisl laoreet malesuada.
+	<div class="watering-status">
+		<span class="status-text">NOT WATERING</span>
+	</div>
+	<div class="gpm-psi-tile-layout">
+		<div class="tile">
+			<span class="tile-item tile-value">0</span><span
+				class="tile-item tile-label">PSI</span>
+		</div>
+		<div class="tile">
+			<span class="tile-item tile-value">0</span><span
+				class="tile-item tile-label">GPM</span>
+		</div>
+	</div>
 </div>
 
 <style>
 	.waterguard-detail-layout {
-		background-color: #ededed;
+		display: grid;
+		grid-template-rows: auto auto 1fr;
+		margin: 17px 8px 20px 8px;
+		grid-gap: 16px;
+	}
+	.watering-status {
+		display: grid;
+		background-color: #ff4d00;
+		color: white;
+		font-size: 17px;
+		font-weight: 700;
+		border-radius: 8px;
+		height: 48px;
+	}
+	.status-text {
+		align-self: center;
+		justify-self: center;
+		margin-top: 2px;
+	}
+	.gpm-psi-tile-layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 16px;
+	}
+	.tile {
+		background-color: white;
+		display: grid;
+		padding: 14px;
+	}
+	.tile-item {
+		align-self: center;
+		justify-self: center;
+	}
+	.tile-value {
+		color: #ff4d00;
+		font-size: 36px;
+		font-weight: 700;
+	}
+	.tile-label {
+		color: #000;
+		font-size: 17px;
 	}
 </style>
