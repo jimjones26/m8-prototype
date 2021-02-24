@@ -15,19 +15,16 @@
 } */
 html {
 	background-color: #333333;
-	height: 100vh;
 	font-family: 'Roboto', sans-serif;
 	color: #000;
 }
 body {
 	margin: 0px;
 	padding: 0px;
-	display: grid;
-	grid-template-rows: 1fr;
-	height: 100vh;
 }
 
 #sapper {
+	height: 100vh;
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 }

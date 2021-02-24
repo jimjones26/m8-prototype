@@ -39,11 +39,10 @@
 
 <style>
 	main {
-		position: relative;
+		display: grid;
 		background-color: transparent;
 		padding: 0;
 		margin: 0;
-		display: grid;
-		grid-template-rows: 1fr;
+		overflow: hidden auto;
 	}
 </style>
