@@ -31,6 +31,7 @@
 		<label for="username"><span>PASSWORD</span>
 			<input type="password" bind:value={password} />
 		</label>
+		<p class="forgot-password">forgot password?</p>
 		<button type="submit">SUBMIT</button>
 	</form>
 </div>
@@ -49,9 +50,9 @@
 		justify-self: stretch;
 		align-self: center;
 		display: grid;
-		grid-template-rows: auto auto auto auto;
 		margin-left: 48px;
 		margin-right: 48px;
+		margin-top: -56px;
 	}
 	/* .m8-logo {
 		height: 54px;
@@ -66,6 +67,7 @@
 		font-size: 24px;
 		font-weight: 700;
 		color: #e2e2e2;
+		margin-bottom: 45px;
 	}
 	label {
 		font-size: 12px;
@@ -93,6 +95,11 @@
 	input:focus {
 		outline: none;
 	}
+	.forgot-password {
+		color: #76777a;
+		font-size: 12px;
+		margin-top: -13px;
+	}
 	button {
 		background: #ff4d00;
 		border: 0 transparent;
@@ -102,5 +109,9 @@
 		cursor: pointer;
 		padding-top: 15px;
 		padding-bottom: 15px;
+		margin-top: 28px;
+	}
+	span {
+		margin-bottom: 7px;
 	}
 </style>
